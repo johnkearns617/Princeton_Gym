@@ -9,6 +9,7 @@ library(tidyverse)
 
 # set folder
 folder = paste0("")
+Sys.setenv(TZ="America/New_York")
 
 # set key
 Sys.setenv("GOOGLE_KEY" = "AIzaSyDkgsVgd1ev7BaPNgxt0igVB63UgLVY5Go")

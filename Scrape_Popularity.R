@@ -3,7 +3,7 @@
 # 2023-02-10
 
 # install packages
-#remotes::install_github("JosiahParry/populartimes")
+remotes::install_github("JosiahParry/populartimes")
 library(populartimes)
 library(tidyverse)
 
@@ -55,6 +55,7 @@ color = case_when(
   TRUE~"green"
 )
 
+save(paste0(folder,"data.RData"))
 
 
   

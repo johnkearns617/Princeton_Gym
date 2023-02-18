@@ -55,7 +55,7 @@ color = case_when(
   TRUE~"green"
 )
 
-save(paste0(folder,"data.RData"))
+save.image(paste0(folder,"data.RData"))
 
 
   

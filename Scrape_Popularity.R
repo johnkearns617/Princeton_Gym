@@ -46,7 +46,8 @@ do_i_go = case_when(
   current_popular$current_popularity>=current_popular$expected_popularity&current_popular$expected_popularity<50&current_popular$current_popularity>=50~"DO NOT GO\nIt usually isn't crowded, but there are kids in there",
   current_popular$current_popularity<current_popular$expected_popularity&current_popular$expected_popularity>=50&current_popular$current_popularity>=50~"IT'S A MAYBE\nIt's usually crowded at this time, you can risk it",
   current_popular$current_popularity<current_popular$expected_popularity&current_popular$expected_popularity>=50&current_popular$current_popularity<50~"GO\nIt's much emptier than usual",
-  current_popular$current_popularity<50~"GO\nIt's empty"
+  current_popular$current_popularity<50~"GO\nIt's empty",
+  current_popular$current_popularity>=current_popular$expected_popularity&current_popular$current_popularity<50~"IT'S A MAYBE\nIt's more crowded than usual, but its dead around this time"
   )
 
 color = case_when(
